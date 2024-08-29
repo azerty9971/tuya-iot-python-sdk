@@ -281,7 +281,7 @@ class TuyaOpenAPI:
 
         if result.get("code", -1) == TUYA_ERROR_CODE_TOKEN_INVALID:
             self.token_info = None
-            self.connect(
+            return self.connect(
                 self.__username, self.__password, self.__country_code, self.__schema
             )
 
